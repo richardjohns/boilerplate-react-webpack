@@ -3,8 +3,8 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Header from './Header'
 import ActiveVid from './ActiveVid'
-// import Symbols from './Symbols'
-import Feedbacks from './Feedbacks'
+import Ratings from './Ratings'
+import Comments from './Comments'
 import Footer from './Footer'
 import VidList from './VidList'
 
@@ -40,6 +40,8 @@ class App extends React.Component {
           <ActiveVid video={this.state.activeVid} title={this.state.title}/>
           <VidList active={this.state.activeVid} vids={this.state.vids} showVideo={this.showVideo}/>
         </div>
+        <Ratings activeVid={this.state.activeVid} />
+        <Comments activeVid={this.state.activeVid} />
       </div>
     )
   }
